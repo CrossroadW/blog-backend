@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>person info list</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>age</th>
+        <th>gender</th>
+        <th>id_card</th>
+        <th>address</th>
+        <th>temperature</th>
+    </tr>
+    {% for item in object_list %}
+    <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.gender.get_display }}</td>
+        <td>{{ item.id_card }}</td>
+        <td>{{ item.address }}</td>
+        <td>{{ item.temperature }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="5">empty</td>
+    </tr>
+    {% endfor %}
+</table>
+<img src="/static/123.jpg" alt="123" style="width: 200px;">
+<img src="/static/logo.png" alt="logo" style="width: 200px;">
+</body>
+</html>
