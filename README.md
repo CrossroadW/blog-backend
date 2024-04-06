@@ -8,3 +8,5 @@
 - sqlite3
 - pycharm
   
+reference article
+https://www.longair.cn/article/?id=2
